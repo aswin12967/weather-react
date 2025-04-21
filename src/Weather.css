@@ -1,0 +1,135 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css");
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("../src/images/weather-background.jpg") center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Urbanist", sans-serif;
+}
+
+.weather-container {
+  background-image: linear-gradient(180deg, #add8e6 0%, #FBFBFB 85%);
+  padding: 2rem;
+  border-radius: 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+.weather-container h1 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+input[type="text"] {
+  padding: 0.7rem;
+  width: 70%;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+
+
+.weather-card {
+  animation: fadeIn 0.6s ease-in-out;
+  margin-top: 1rem;
+}
+
+.weather-details {
+  text-align: center;
+  padding: 1rem;
+}
+
+.city-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.icon-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-icon {
+  width: 7rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+.temperature {
+  font-size: 3rem;
+}
+
+.climate-type {
+  font-size: 2rem;
+}
+
+.quote {
+    font-style: italic;
+    margin-top: 1rem;
+    color: #444;
+    font-size: 1rem;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .weather-Woman {
+    width: 350px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .weather-intro {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
