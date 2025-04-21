@@ -27,7 +27,11 @@ body {
   max-width: 400px;
   box-sizing: border-box;
 }
-
+.weather-container h1{
+  font-family: 'Special Gothic Expanded One';
+  font-style: normal;
+  font-weight: 400;
+}
 
 input[type="text"] {
   padding: 0.7rem;
