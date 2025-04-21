@@ -1,4 +1,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css");
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; 
+}
 
 body {
   margin: 0;
@@ -18,7 +24,8 @@ body {
   border-radius: 2.5rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 350px;
+ width: 80%;
+  max-width: 400px;
 }
 
 .weather-container h1 {
