@@ -1,21 +1,20 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css");
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; 
+  overflow: auto; 
 }
-
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   background: url("../src/images/weather-background.jpg") center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Urbanist", sans-serif;
+  overflow-x: hidden;
 }
 
 .weather-container {
@@ -24,14 +23,9 @@ body {
   border-radius: 2.5rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
- width: 80%;
+  width: 90vw;
   max-width: 400px;
-}
-
-.weather-container h1 {
-  font-family: "Special Gothic Expanded One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  box-sizing: border-box;
 }
 
 
@@ -138,5 +132,38 @@ input[type="text"] {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-height: 600px) {
+  body {
+    align-items: flex-start; 
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .weather-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .temperature {
+    font-size: 2.5rem;
+  }
+
+  .city-name {
+    font-size: 1.5rem;
+  }
+
+  .climate-type {
+    font-size: 1.3rem;
+  }
+
+  .weather-icon {
+    width: 5.5rem;
+  }
+
+  input[type="text"] {
+    width: 90%;
   }
 }
