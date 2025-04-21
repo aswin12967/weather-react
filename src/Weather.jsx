@@ -46,9 +46,16 @@ function Weather() {
   };
 
   useEffect(() => {
+    if (search.trim() === "") {
+      setCity(null);
+      setError("");
+      setHasSearched(false); 
+      return;
+    }
+  
     getWeatherData();
-
   }, [search]);
+  
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -139,5 +146,8 @@ function Weather() {
 }
 
 export default Weather;
+
+
+
 
 
